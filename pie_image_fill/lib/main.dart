@@ -154,9 +154,9 @@ class _PieImageShaderState extends State<PieImageShader> {
                         ],
                         xValueMapper: (_ChartShaderData data, _) => data.x,
                         yValueMapper: (_ChartShaderData data, _) => data.y,
-                        pointShaderMapper: (_ChartShaderData data, _,
-                                Color color, Rect rect) =>
-                            data.shader,
+                        pointShaderMapper:
+                            (dynamic data, _, Color color, Rect rect) =>
+                                data.shader,
                         radius: '63%',
                       ),
                     ],
@@ -345,7 +345,7 @@ class _ChartShaderData {
 //                     xValueMapper: (_SalesData sales, _) => sales.year,
 //                     yValueMapper: (_SalesData sales, _) => sales.sales,
 //                     pointShaderMapper:
-//                         (_SalesData data, _, Color color, Rect rect) =>
+//                         (dynamic data, _, Color color, Rect rect) =>
 //                             data.shader!,
 //                     name: 'Sales',
 //                   )
